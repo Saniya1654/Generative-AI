@@ -7,7 +7,7 @@ import json
 import re
 
 # Hardcoded API key (for demo purposes - in production, use environment variables)
-GEMINI_API_KEY = "AIzaSyD5i7KiUX5jDMYeBPg4uY8ABlF6F1dJK9g"
+GEMINI_API_KEY = ""
 
 # Try to import Google Generative AI, but allow fallback if not available
 try:
