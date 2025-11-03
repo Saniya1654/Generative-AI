@@ -1,0 +1,454 @@
+[
+  {
+    "id": 1,
+    "name": "Vegetarian Pasta Primavera",
+    "cuisine": "Italian",
+    "meal_type": "Dinner",
+    "difficulty": "Easy",
+    "prep_time": 15,
+    "cook_time": 20,
+    "servings": 4,
+    "ingredients": [
+      "pasta",
+      "olive oil",
+      "garlic",
+      "bell peppers",
+      "zucchini",
+      "cherry tomatoes",
+      "basil",
+      "parmesan cheese",
+      "salt",
+      "black pepper"
+    ],
+    "steps": [
+      "Bring a large pot of salted water to boil and cook pasta according to package directions until al dente.",
+      "Heat olive oil in a large pan over medium heat. Add minced garlic and sauté for 1 minute.",
+      "Add chopped bell peppers and zucchini, cook for 5 minutes until slightly softened.",
+      "Add cherry tomatoes and cook for another 3 minutes until tomatoes start to burst.",
+      "Drain pasta and add to the pan with vegetables. Toss everything together.",
+      "Add fresh basil, salt, and black pepper. Mix well.",
+      "Serve hot topped with grated parmesan cheese."
+    ],
+    "dietary_info": {
+      "vegetarian": true,
+      "vegan": false,
+      "gluten_free": false,
+      "dairy_free": false,
+      "nut_free": true,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "vegetarian",
+      "pasta",
+      "quick"
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Vegan Chickpea Curry",
+    "cuisine": "Indian",
+    "meal_type": "Dinner",
+    "difficulty": "Medium",
+    "prep_time": 10,
+    "cook_time": 25,
+    "servings": 4,
+    "ingredients": [
+      "chickpeas",
+      "coconut milk",
+      "onion",
+      "garlic",
+      "ginger",
+      "curry powder",
+      "turmeric",
+      "cumin",
+      "tomatoes",
+      "olive oil",
+      "salt",
+      "cilantro"
+    ],
+    "steps": [
+      "Heat olive oil in a large pot over medium heat. Add diced onions and cook until translucent.",
+      "Add minced garlic and grated ginger, cook for 1 minute until fragrant.",
+      "Add curry powder, turmeric, and cumin. Stir for 30 seconds.",
+      "Add diced tomatoes and cook for 3 minutes until they start to break down.",
+      "Add chickpeas and coconut milk. Bring to a simmer.",
+      "Reduce heat and let simmer for 15 minutes, stirring occasionally.",
+      "Season with salt. Garnish with fresh cilantro before serving."
+    ],
+    "dietary_info": {
+      "vegetarian": true,
+      "vegan": true,
+      "gluten_free": true,
+      "dairy_free": true,
+      "nut_free": true,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "vegan",
+      "curry",
+      "spicy"
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Grilled Chicken Salad",
+    "cuisine": "American",
+    "meal_type": "Lunch",
+    "difficulty": "Easy",
+    "prep_time": 10,
+    "cook_time": 15,
+    "servings": 2,
+    "ingredients": [
+      "chicken breast",
+      "mixed greens",
+      "cherry tomatoes",
+      "cucumber",
+      "olive oil",
+      "lemon juice",
+      "salt",
+      "black pepper",
+      "balsamic vinegar"
+    ],
+    "steps": [
+      "Season chicken breast with salt, black pepper, and olive oil.",
+      "Grill or pan-sear chicken for 6-7 minutes per side until fully cooked.",
+      "Let chicken rest for 5 minutes, then slice into strips.",
+      "Wash and prepare mixed greens, cherry tomatoes, and sliced cucumber.",
+      "Combine all vegetables in a large bowl.",
+      "Whisk together olive oil, lemon juice, balsamic vinegar, salt, and pepper for dressing.",
+      "Toss salad with dressing and top with sliced chicken. Serve immediately."
+    ],
+    "dietary_info": {
+      "vegetarian": false,
+      "vegan": false,
+      "gluten_free": true,
+      "dairy_free": true,
+      "nut_free": true,
+      "low_carb": true,
+      "keto": true
+    },
+    "tags": [
+      "low-carb",
+      "keto",
+      "healthy"
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Quinoa Buddha Bowl",
+    "cuisine": "Mediterranean",
+    "meal_type": "Lunch",
+    "difficulty": "Easy",
+    "prep_time": 15,
+    "cook_time": 20,
+    "servings": 2,
+    "ingredients": [
+      "quinoa",
+      "sweet potato",
+      "broccoli",
+      "chickpeas",
+      "avocado",
+      "olive oil",
+      "lemon juice",
+      "salt",
+      "pepper",
+      "tahini"
+    ],
+    "steps": [
+      "Cook quinoa according to package directions (usually 1:2 ratio with water, simmer 15 minutes).",
+      "Preheat oven to 400°F. Cut sweet potato into cubes and roast for 20 minutes.",
+      "Steam or roast broccoli florets until tender-crisp (about 5-7 minutes).",
+      "Drain and rinse chickpeas. Season with olive oil, salt, and pepper.",
+      "Prepare tahini dressing: mix tahini, lemon juice, water, and salt until smooth.",
+      "Arrange quinoa, sweet potato, broccoli, chickpeas, and sliced avocado in bowls.",
+      "Drizzle with tahini dressing and serve."
+    ],
+    "dietary_info": {
+      "vegetarian": true,
+      "vegan": true,
+      "gluten_free": true,
+      "dairy_free": true,
+      "nut_free": true,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "vegan",
+      "healthy",
+      "bowl"
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Salmon Teriyaki with Rice",
+    "cuisine": "Japanese",
+    "meal_type": "Dinner",
+    "difficulty": "Medium",
+    "prep_time": 10,
+    "cook_time": 20,
+    "servings": 2,
+    "ingredients": [
+      "salmon fillet",
+      "soy sauce",
+      "honey",
+      "ginger",
+      "garlic",
+      "rice",
+      "sesame seeds",
+      "green onions",
+      "cornstarch"
+    ],
+    "steps": [
+      "Cook rice according to package directions.",
+      "Mix soy sauce, honey, minced ginger, and minced garlic in a bowl for teriyaki sauce.",
+      "Heat a non-stick pan over medium-high heat. Cook salmon skin-side down for 4-5 minutes.",
+      "Flip salmon and cook for another 3-4 minutes until cooked through.",
+      "Remove salmon and set aside. In the same pan, add teriyaki sauce.",
+      "Dissolve cornstarch in water and add to sauce. Simmer until thickened.",
+      "Serve salmon over rice, drizzle with teriyaki sauce, and garnish with sesame seeds and green onions."
+    ],
+    "dietary_info": {
+      "vegetarian": false,
+      "vegan": false,
+      "gluten_free": false,
+      "dairy_free": true,
+      "nut_free": true,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "fish",
+      "japanese",
+      "teriyaki"
+    ]
+  },
+  {
+    "id": 6,
+    "name": "Vegan Black Bean Tacos",
+    "cuisine": "Mexican",
+    "meal_type": "Dinner",
+    "difficulty": "Easy",
+    "prep_time": 10,
+    "cook_time": 15,
+    "servings": 4,
+    "ingredients": [
+      "black beans",
+      "corn tortillas",
+      "avocado",
+      "onion",
+      "garlic",
+      "cumin",
+      "chili powder",
+      "lime",
+      "cilantro",
+      "lettuce"
+    ],
+    "steps": [
+      "Heat a pan over medium heat. Add a bit of oil and sauté diced onions until soft.",
+      "Add minced garlic, cumin, and chili powder. Cook for 1 minute.",
+      "Add black beans (drained and rinsed) and mash slightly. Cook for 5 minutes.",
+      "Warm corn tortillas in a dry pan or microwave.",
+      "Slice avocado and prepare lettuce.",
+      "Assemble tacos: black beans, avocado slices, lettuce, and fresh cilantro.",
+      "Squeeze lime juice over tacos and serve immediately."
+    ],
+    "dietary_info": {
+      "vegetarian": true,
+      "vegan": true,
+      "gluten_free": true,
+      "dairy_free": true,
+      "nut_free": true,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "vegan",
+      "mexican",
+      "tacos"
+    ]
+  },
+  {
+    "id": 7,
+    "name": "Keto Cauliflower Fried Rice",
+    "cuisine": "Asian",
+    "meal_type": "Dinner",
+    "difficulty": "Easy",
+    "prep_time": 10,
+    "cook_time": 15,
+    "servings": 3,
+    "ingredients": [
+      "cauliflower",
+      "eggs",
+      "soy sauce",
+      "garlic",
+      "ginger",
+      "onion",
+      "peas",
+      "carrots",
+      "sesame oil",
+      "green onions"
+    ],
+    "steps": [
+      "Grate cauliflower using a food processor or grater to create rice-like texture.",
+      "Heat sesame oil in a large pan or wok over high heat.",
+      "Add diced onions, minced garlic, and minced ginger. Stir-fry for 1 minute.",
+      "Add grated cauliflower and stir-fry for 5 minutes until slightly softened.",
+      "Push cauliflower to one side, add beaten eggs to the other side and scramble.",
+      "Add diced carrots and peas. Stir everything together.",
+      "Add soy sauce and continue cooking for 2 minutes. Garnish with green onions and serve."
+    ],
+    "dietary_info": {
+      "vegetarian": false,
+      "vegan": false,
+      "gluten_free": false,
+      "dairy_free": true,
+      "nut_free": true,
+      "low_carb": true,
+      "keto": true
+    },
+    "tags": [
+      "keto",
+      "low-carb",
+      "asian"
+    ]
+  },
+  {
+    "id": 8,
+    "name": "Gluten-Free Banana Bread",
+    "cuisine": "American",
+    "meal_type": "Breakfast",
+    "difficulty": "Easy",
+    "prep_time": 15,
+    "cook_time": 60,
+    "servings": 8,
+    "ingredients": [
+      "almond flour",
+      "bananas",
+      "eggs",
+      "honey",
+      "baking powder",
+      "vanilla extract",
+      "cinnamon",
+      "walnuts"
+    ],
+    "steps": [
+      "Preheat oven to 350°F. Grease a loaf pan.",
+      "Mash 3 ripe bananas in a large bowl.",
+      "Add eggs, honey, and vanilla extract. Mix well.",
+      "Add almond flour, baking powder, and cinnamon. Stir until combined.",
+      "Fold in chopped walnuts (optional).",
+      "Pour batter into prepared loaf pan.",
+      "Bake for 55-60 minutes until a toothpick inserted comes out clean. Cool before slicing."
+    ],
+    "dietary_info": {
+      "vegetarian": true,
+      "vegan": false,
+      "gluten_free": true,
+      "dairy_free": true,
+      "nut_free": false,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "gluten-free",
+      "breakfast",
+      "baking"
+    ]
+  },
+  {
+    "id": 9,
+    "name": "Mediterranean Stuffed Peppers",
+    "cuisine": "Mediterranean",
+    "meal_type": "Dinner",
+    "difficulty": "Medium",
+    "prep_time": 20,
+    "cook_time": 35,
+    "servings": 4,
+    "ingredients": [
+      "bell peppers",
+      "rice",
+      "ground turkey",
+      "tomatoes",
+      "onion",
+      "garlic",
+      "olive oil",
+      "oregano",
+      "feta cheese",
+      "salt",
+      "pepper"
+    ],
+    "steps": [
+      "Preheat oven to 375°F. Cut tops off bell peppers and remove seeds.",
+      "Cook rice according to package directions.",
+      "Heat olive oil in a pan. Sauté diced onions and minced garlic until fragrant.",
+      "Add ground turkey and cook until browned. Season with oregano, salt, and pepper.",
+      "Mix cooked rice, ground turkey, and diced tomatoes together.",
+      "Stuff bell peppers with the mixture. Top with crumbled feta cheese.",
+      "Place in baking dish with a little water. Bake for 30-35 minutes until peppers are tender."
+    ],
+    "dietary_info": {
+      "vegetarian": false,
+      "vegan": false,
+      "gluten_free": true,
+      "dairy_free": false,
+      "nut_free": true,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "mediterranean",
+      "stuffed",
+      "healthy"
+    ]
+  },
+  {
+    "id": 10,
+    "name": "Vegan Lentil Soup",
+    "cuisine": "Mediterranean",
+    "meal_type": "Lunch",
+    "difficulty": "Easy",
+    "prep_time": 10,
+    "cook_time": 40,
+    "servings": 6,
+    "ingredients": [
+      "lentils",
+      "onion",
+      "carrots",
+      "celery",
+      "garlic",
+      "tomatoes",
+      "vegetable broth",
+      "cumin",
+      "paprika",
+      "olive oil",
+      "lemon juice",
+      "salt",
+      "pepper"
+    ],
+    "steps": [
+      "Heat olive oil in a large pot over medium heat. Add diced onions, carrots, and celery.",
+      "Cook vegetables for 5 minutes until softened.",
+      "Add minced garlic, cumin, and paprika. Stir for 1 minute.",
+      "Add rinsed lentils, diced tomatoes, and vegetable broth.",
+      "Bring to a boil, then reduce heat and simmer for 30-35 minutes until lentils are tender.",
+      "Season with salt and pepper. Stir in lemon juice before serving.",
+      "Serve hot with a drizzle of olive oil and fresh herbs if desired."
+    ],
+    "dietary_info": {
+      "vegetarian": true,
+      "vegan": true,
+      "gluten_free": true,
+      "dairy_free": true,
+      "nut_free": true,
+      "low_carb": false,
+      "keto": false
+    },
+    "tags": [
+      "vegan",
+      "soup",
+      "healthy"
+    ]
+  }
+]
