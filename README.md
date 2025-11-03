@@ -1,6 +1,8 @@
-# 🤖 AI-Powered Recipe Recommendation System
+# 🤖 AI-Powered Recipe Assistant
 
-A **Generative AI** web application that suggests and creates recipes based on user preferences, dietary restrictions, and available ingredients. The system uses AI to generate custom recipes, adapt existing ones, and provide personalized cooking tips.
+A **Generative AI** project that can both suggest existing recipes and generate brand‑new ones based on your preferences, dietary restrictions, and available ingredients. It includes:
+- A no‑server CLI (with interactive wizard)
+- A FastAPI server (optional) exposing REST endpoints
 
 ## 🎯 Key Features
 
@@ -29,7 +31,7 @@ A **Generative AI** web application that suggests and creates recipes based on u
    pip install -r requirements.txt
    ```
 
-3. **Initialize the recipe database:**
+3. **Initialize the recipe database (once):**
    ```bash
    python initialize_recipes.py
    ```
@@ -44,43 +46,63 @@ A **Generative AI** web application that suggests and creates recipes based on u
      # Linux/Mac
      export GEMINI_API_KEY=your_api_key_here
      ```
-   - **Note**: The system works without an API key using an intelligent fallback generator
-   - **Model**: Uses Gemini 2.0 Flash Experimental by default (or 1.5 Flash as fallback)
+   - Note: The system works without an API key using an intelligent fallback generator
+   - Model: Uses Gemini 2.0 Flash Experimental by default (or 1.5 Flash as fallback)
 
 ## Usage
 
-1. **Start the Flask server:**
-   ```bash
-   python app.py
-   ```
+### No‑server (CLI)
 
-2. **Open your web browser and navigate to:**
-   ```
-   http://localhost:5000
-   ```
+- Interactive wizard (prompted input):
+  ```bash
+  python cli.py wizard
+  ```
 
-3. **Fill out the preference form:**
-   - Select your preferred cuisine (optional)
-   - Choose meal type (optional)
-   - Set difficulty level (optional)
-   - Check any dietary restrictions that apply
-   - Enter available ingredients (comma-separated)
+- Flags (one‑liners):
+  - Recommend from local recipes
+    ```bash
+    python cli.py recommend --cuisine Indian --diet vegan --have rice tomatoes onions --top 3
+    ```
+  - Generate a brand‑new AI recipe
+    ```bash
+    python cli.py generate --meal Dinner --have rice egg "soy sauce"
+    ```
+  - Adapt an existing recipe by ID
+    ```bash
+    python cli.py adapt 1 --have zucchini basil pasta
+    ```
+  - Get AI cooking tips for a recipe
+    ```bash
+    python cli.py tips 1
+    ```
 
-4. **Choose your search method:**
-   - **Find Recipes**: Search existing recipes with optional AI generation
-   - **Generate AI Recipe**: Create a completely new recipe using AI
-   - **Enable "Use AI" checkbox**: Include AI-generated recipes in search results
+### FastAPI server (optional)
 
-5. **Click on any recipe card** to view:
-   - Detailed step-by-step instructions
-   - AI-generated cooking tips
-   - Recipe adaptation options (for non-AI recipes)
+- Start directly (no reload):
+  ```bash
+  python fastapi_app.py
+  ```
 
-6. **Adapt recipes**: Click "🔄 Adapt Recipe" to modify any recipe to work with your available ingredients
+- Or with auto‑reload (recommended during development):
+  ```bash
+  uvicorn fastapi_app:app --reload --host 0.0.0.0 --port 8000
+  ```
+
+- Test endpoints (Swagger UI):
+  - Open `http://127.0.0.1:8000/docs`
+
+- Example request body for POST `/api/recommend` or `/api/generate`:
+  ```json
+  {
+    "preferences": { "cuisine": "Indian", "meal_type": "Dinner", "difficulty": "Easy" },
+    "dietary_restrictions": ["vegan"],
+    "available_ingredients": ["rice", "tomatoes", "onions", "garlic"]
+  }
+  ```
 
 ## How It Works
 
-### AI-Powered Recipe Generation
+### AI‑Powered Recipe Generation
 
 The system uses **Generative AI** to create recipes:
 
@@ -114,17 +136,13 @@ The system uses **Generative AI** to create recipes:
 
 ```
 .
-├── app.py                  # Flask backend application with AI endpoints
-├── ai_service.py           # AI service with OpenAI and fallback generator
+├── ai_service.py           # AI service with Google Gemini and fallback generator
 ├── initialize_recipes.py   # Recipe database initialization
 ├── recipes.json            # Recipe database (generated)
 ├── requirements.txt        # Python dependencies
 ├── README.md              # This file
-├── templates/
-│   └── index.html         # Main HTML template
-└── static/
-    ├── style.css          # Stylesheet
-    └── script.js          # Frontend JavaScript
+├── cli.py                 # No‑server CLI (flags + interactive wizard)
+└── fastapi_app.py         # FastAPI server
 ```
 
 ## Adding More Recipes
@@ -148,11 +166,9 @@ Then run `python initialize_recipes.py` again to regenerate the database.
 
 ## Technologies Used
 
-- **Backend**: Python Flask
+- **Backend**: FastAPI (server) and Python CLI (no‑server)
 - **AI/ML**: Google Gemini 2.0 Flash API (with fallback generator)
-- **Frontend**: HTML5, CSS3, JavaScript (Vanilla)
 - **Storage**: JSON file-based database
-- **Styling**: Modern CSS with gradients and animations
 
 ## AI Implementation Details
 
@@ -161,6 +177,18 @@ Then run `python initialize_recipes.py` again to regenerate the database.
 - **Fallback Generator**: Template-based AI that works without API keys
 - **Smart Prompting**: Optimized prompts for recipe generation and adaptation
 - **JSON Parsing**: Intelligent JSON extraction from AI responses
+
+## Generate vs Recommend
+
+- **Recommend**
+  - Input: Preferences + dietary restrictions + available ingredients
+  - Behavior: Filters and ranks recipes from the existing local dataset (`recipes.json`) using an ingredient‑match and preference‑match scoring algorithm
+  - Output: Top matching existing recipes (no new recipe is created)
+
+- **Generate**
+  - Input: Preferences + dietary restrictions + available ingredients
+  - Behavior: Uses Generative AI (Gemini) to create a brand‑new recipe tailored to your inputs (ingredients, cuisine, etc.)
+  - Output: A newly generated recipe with ingredients, steps, times, and dietary flags (optionally followed by AI cooking tips)
 
 ## Future Enhancements
 
